@@ -52,17 +52,16 @@ $(function () {
 const linkDescritpion = document.querySelector('.myWork')
 const mainContainer = document.querySelector('body')
 
-
 mainContainer.addEventListener('mouseover', (e) => {
-	if (e.target.classList.contains('fa-youtube')) { linkDescritpion.innerHTML = 'YouTube playlist of my projects' }
-	else if (e.target.classList.contains('fa-github')) { linkDescritpion.innerHTML = 'My GitHub page' }
-	else if (e.target.classList.contains('fa-file')) { linkDescritpion.innerHTML = 'View & download my resume' }
-	else if (e.target.classList.contains('fa-linkedin')) { linkDescritpion.innerHTML = 'My LinkedIn profile' }
-	else if (e.target.classList.contains('fa-envelope-o')) { linkDescritpion.innerHTML = 'Send me an email' }
+	if (e.target.classList.contains('fa-youtube')) { linkDescritpion.innerHTML = 'YouTube playlist of my projects'; linkDescritpion.style.opacity = '1' }
+	else if (e.target.classList.contains('fa-github')) { linkDescritpion.innerHTML = 'My GitHub page'; linkDescritpion.style.opacity = '1' }
+	else if (e.target.classList.contains('fa-file')) { linkDescritpion.innerHTML = 'View & download my resume'; linkDescritpion.style.opacity = '1' }
+	else if (e.target.classList.contains('fa-linkedin')) { linkDescritpion.innerHTML = 'My LinkedIn profile'; linkDescritpion.style.opacity = '1' }
+	else if (e.target.classList.contains('fa-envelope-o')) { linkDescritpion.innerHTML = 'Send me an email'; linkDescritpion.style.opacity = '1' }
 })
 
 mainContainer.addEventListener('mouseout', (event) => {
 	if (event.target.classList.contains('icon')) {
-		linkDescritpion.innerHTML = ''
+		linkDescritpion.style.opacity = '0'
 	}
 })
